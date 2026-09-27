@@ -1,0 +1,4 @@
+- **Model**: A fully connected neural network using a cylinder architecture with hidden layers of size 2240. The model uses BatchNorm, GELU activations, and dropout between the linear layers.
+- **Training Strategy**: AdamW optimizer with a learning rate of 0.001 and weight decay of 0.05. Cosine Annealing was used as the learning rate scheduler, with Cross Entropy Loss for training. Xavier normal initialization was used for the weights.
+- **Augmentations**: Used both frequency masking and time masking on the log-mel spectrogram features, with frequency mask = 4 and time mask = 8.
+- **Notebook Execution**: Run the notebook cells in order to load the dataset, create the model, and generate predictions. For submission, the trained checkpoint can be loaded directly instead of retraining the model.
